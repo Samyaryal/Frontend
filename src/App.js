@@ -2,7 +2,7 @@ import './App.css';
 import Data from './data.json';
 import React, {useState} from 'react';
 import Resturant from './components/Resturant';
-
+import Button from './components/Button';
 
 const App = () => {
   const data = Object.values(Data)[0]
@@ -32,31 +32,20 @@ const App = () => {
     setResturants(prevState => [...prevState].sort(dscCompare))
   }
   
-  const display = (data) =>{
-    let result = "";
-    data.forEach(({}))
+  const returnOriginal = () => {
+    setResturants([...data])
   }
 
   return (
-    <div className = "filters">
-    <div>
-    SortBy: 
-    <select className="sort-by">
-    <option value ="">Select one</option>
-    <option value ="price">Price</option>
-    <option value ="location">Location</option>
-    </select>
-    </div>
-    <div>
-    SorytOrder:
-    <select class="sort-order">
-      <option value="">Select one</option>
-      <option value="asc">Ascending {sortAZ}</option>
-      <option value="desc">Descending {sortZA}</option>
-    </select>
+    <div className = "App">
+    <h1 className="header">Pick your favourite Resturant</h1>
+    <div className="App-buttons">
+    <Button name={'Ascending'} task ={sortAZ}/>
+    <Button name={'Descending'} task = {sortZA} />
+    <Button name={'Original'} task ={returnOriginal}/>
     </div>
     <div className="App-resturants row">
-      {resturants.map((resturant,i) => <Resturant key={i} resturant={resturant}/>)}
+      {resturants.map((resturant) => <Resturant resturant={resturant}/>)}
     </div>
     </div>
     
