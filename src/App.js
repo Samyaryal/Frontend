@@ -3,10 +3,11 @@ import Data from './data.json';
 import React, {useState} from 'react';
 import Resturant from './components/Resturant';
 import Button from './components/Button';
+import Footer from './components/Footer';
 
 const App = () => {
   const data = Object.values(Data)[0]
-  const [resturants, setResturants] = useState([...data])
+  const [resturants, setResturants] = useState(data)
 
   const sortAZ= () => {
     const ascCompare = (a1, b1) => {
@@ -17,7 +18,7 @@ const App = () => {
     else if ( a > b) return 1;
     else return 0;
     }
-    setResturants(prevState => [...prevState].sort(ascCompare))
+    setResturants(data => [...data].sort(ascCompare))
   }
 
   const sortZA= () => {
@@ -29,11 +30,11 @@ const App = () => {
     else if ( a > b) return -1;
     else return 0;
     }
-    setResturants(prevState => [...prevState].sort(dscCompare))
+    setResturants(data =>[...data].sort(dscCompare))
   }
   
   const returnOriginal = () => {
-    setResturants([...data])
+    setResturants(data)
   }
 
   return (
@@ -44,9 +45,10 @@ const App = () => {
     <Button name={'Descending'} task = {sortZA} />
     <Button name={'Original'} task ={returnOriginal}/>
     </div>
-    <div className="App-resturants row">
+    <div className="app-resturants-row">
       {resturants.map((resturant) => <Resturant resturant={resturant}/>)}
     </div>
+    <Footer />
     </div>
     
     

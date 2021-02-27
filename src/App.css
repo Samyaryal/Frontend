@@ -1,0 +1,56 @@
+.App{
+  padding: 2% 2%;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: #f2f2f2;
+}
+.header{
+  text-align: center;
+  font-size: 40px;
+}
+.App-buttons {
+  width: 100%;
+  margin: 5% auto;
+}
+.app-resturants-row{
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.resturant-image{
+  width: 30%;
+  position: relative;
+  box-shadow: whitesmoke 2px;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+.Resturant-title{
+  font-weight: bold;
+  font-size: 25px;
+}
+.Resturant-blurhash{
+  color: rgb(139, 139, 139);
+  font-size: 12px;
+}
+
+.button {
+  width: 30%;
+  margin : 1.6%;
+  height : 50px;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  border : 1px solid black;
+  border-radius: 50px;
+  outline-color: white;
+}
+.footer {
+  background-color: gray;
+  color: white;
+  line-height: 40px;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 0%;
+} 
