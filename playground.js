@@ -7,10 +7,10 @@
 // console.log(samu)
 
 
-const h1 = "hey"
-const h2 = "Hi"
+// const h1 = "hey"
+// const h2 = "Hi"
 
-console.log(h1.concat( ' , ' , h2))
+// console.log(h1.concat( ' , ' , h2))
 
 // const xyz = [{name: "Samikshya", age: 24}, {name: "sujan", age: 18}, {name: "abc", age: 22}]
 
